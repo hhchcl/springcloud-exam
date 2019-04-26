@@ -1,0 +1,45 @@
+server:
+  port: 8001
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml   #mybatis 配置文件所在路径
+  type-aliases-package: com.deepexi.springcloud.entity #所有的entity别名所在包
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml  #mapper映射文件
+
+spring:
+  application:
+    name: deepexi-service #对外暴露的微服务名称，很重要
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource #数据源类型
+    username: hc
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver #数据库驱动包
+    url: jdbc:mysql://localhost:3306/springcloud-exam #数据库名称
+    dbcp2:
+      min-idle: 5 #数据库连接数最小维持连接数
+      initial-size: 5 #初始化连接数
+      max-total: 5 #最大连接数
+      max-wait-millis: 200 #等待连接获取的最大超时时间
+  http:
+    encoding:
+      charset: UTF-8
+
+logging: #打印sql语句
+  level:
+    com.deepexi.springcloud.mapper.ComponentsMapper: debug
+
+eureka: # 将服务注册到注册中心
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8003/eureka
+
+  instance:
+    instanceId: deepexi-service-8001
+    preferIpAddress: true     #访问路径可以显示IP地址
+info:
+  app.name: deepexi-sprinbcloud
+  company.name: www.deepexi.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+

@@ -1,0 +1,20 @@
+server:
+  port: 8003
+
+#spring:
+  #freemarker:
+    #prefer-file-system-access: false
+
+#C:\Windows\System32\drivers\etc\hosts 配置映射
+eureka:
+  instance:
+    hostname: eureka.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+    server:
+       enable-self-preservation: false #仅在开发阶段关闭自我保护机制
+       #eviction-interval-timer-in-ms: 30 # 设置心跳时间

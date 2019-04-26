@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="deepexi-service-a" />
+        <module name="deepexi-service-b" />
+        <module name="deepexis-ervice-eureka" />
+        <module name="deppexi-service-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="deepexi-service-a" target="1.8" />
+      <module name="deepexi-service-b" target="1.8" />
+      <module name="deepexis-ervice-eureka" target="1.8" />
+      <module name="deppexi-service-api" target="1.8" />
+      <module name="springcloud-exam" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

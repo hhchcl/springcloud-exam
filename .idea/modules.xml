@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/deepexi-service-a/deepexi-service-a.iml" filepath="$PROJECT_DIR$/deepexi-service-a/deepexi-service-a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/deepexi-service-b/deepexi-service-b.iml" filepath="$PROJECT_DIR$/deepexi-service-b/deepexi-service-b.iml" />
+      <module fileurl="file://$PROJECT_DIR$/deepexis-ervice-eureka/deepexis-ervice-eureka.iml" filepath="$PROJECT_DIR$/deepexis-ervice-eureka/deepexis-ervice-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/deppexi-service-api/deppexi-service-api.iml" filepath="$PROJECT_DIR$/deppexi-service-api/deppexi-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-exam.iml" filepath="$PROJECT_DIR$/springcloud-exam.iml" />
+    </modules>
+  </component>
+</project>
