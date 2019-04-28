@@ -10,6 +10,7 @@ mybatis:
 spring:
   application:
     name: deepexi-service #对外暴露的微服务名称，很重要
+
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource #数据源类型
     username: hc
@@ -21,9 +22,16 @@ spring:
       initial-size: 5 #初始化连接数
       max-total: 5 #最大连接数
       max-wait-millis: 200 #等待连接获取的最大超时时间
+
   http:
     encoding:
       charset: UTF-8
+
+  devtools:
+    restart:
+      enabled: true #热部署生效
+      additional-paths: src/main/java #设置重启的目录
+      #exclude: application.yml #classpath目录下的WEB-INF文件夹内容修改不重启
 
 logging: #打印sql语句
   level:
@@ -37,6 +45,7 @@ eureka: # 将服务注册到注册中心
   instance:
     instanceId: deepexi-service-8001
     preferIpAddress: true     #访问路径可以显示IP地址
+
 info:
   app.name: deepexi-sprinbcloud
   company.name: www.deepexi.com

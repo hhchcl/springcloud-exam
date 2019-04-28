@@ -9,6 +9,12 @@ spring:
     encoding:
       charset: UTF-8
 
+   devtools:
+      restart:
+        enabled: true #热部署生效
+        additional-paths: src/main/java #设置重启的目录
+        #exclude: application.yml #classpath目录下的WEB-INF文件夹内容修改不重启
+
 eureka:      # 将服务注册到注册中心
   client:
     register-with-eureka: false
