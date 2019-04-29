@@ -13,6 +13,10 @@
         <module>deepexi-service-b</module>
         <module>deppexi-service-api</module>
         <module>deepexis-ervice-eureka</module>
+        <module>deepexis-ervicea-one</module>
+        <module>deepexi-service-a-two</module>
+        <module>deepexi-service-eureka-one</module>
+        <module>deepexi-service-eureka-two</module>
     </modules>
 
     <properties>
