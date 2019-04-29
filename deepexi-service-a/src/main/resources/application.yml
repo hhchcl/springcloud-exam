@@ -40,14 +40,15 @@ logging: #打印sql语句
 eureka: # 将服务注册到注册中心
   client:
     serviceUrl:
-      defaultZone: http://localhost:8003/eureka
+      #defaultZone: http://localhost:8003/eureka
+      defaultZone: http://localhost:8003/eureka,http://localhost:8006/eureka,http://localhost:8007/eureka
 
   instance:
     instanceId: deepexi-service-8001
     preferIpAddress: true     #访问路径可以显示IP地址
 
 info:
-  app.name: deepexi-sprinbcloud
+  app.name: deepexi-springcloud
   company.name: www.deepexi.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$

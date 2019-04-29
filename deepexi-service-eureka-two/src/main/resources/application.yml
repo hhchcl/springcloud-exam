@@ -14,7 +14,7 @@ eureka:
     fetch-registry: false
     service-url:
       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-      defaultZone: http://eureka.com:8003/eureka/,http://eureka.two.com:8006/eureka/
+      defaultZone: http://eureka.com:8003/eureka/,http://eureka.one.com:8006/eureka/
 
     server:
        enable-self-preservation: false #仅在开发阶段关闭自我保护机制

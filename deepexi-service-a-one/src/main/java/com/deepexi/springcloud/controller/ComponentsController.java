@@ -120,11 +120,13 @@ public class ComponentsController {
     }
 
     @RequestMapping(value = "/provider/get.do", method = RequestMethod.GET)
-    public String getaa() { //eureka服务发现
-        return "访问到了提供者";
+    public List getValue(@RequestBody  int COM_ID) {
+        List list = new ArrayList();
+        list = componentsService.queryById(COM_ID);
+        return list;
     }
 
-
+    @RequestMapping(value = "/provider/queryById.do", method = RequestMethod.GET)
     public List queryById(int COM_ID) {
         return componentsService.queryById(COM_ID);
     }

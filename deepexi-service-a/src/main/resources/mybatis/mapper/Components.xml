@@ -72,8 +72,11 @@
 
     <select id="queryById" resultMap="componentsMap">
         SELECT
-        <include refid="commonSQL"></include>
-        FROM t_components WHERE COM_ID = #{COM_ID}
+            <include refid="commonSQL"></include>
+        FROM
+            t_components
+        WHERE
+            COM_ID = #{COM_ID}
     </select>
 
     <select id="getComponentsById" parameterType="string" resultType="int">

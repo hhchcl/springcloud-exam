@@ -9,6 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -64,8 +65,8 @@ public class ComponentsController {
     }
 
     @RequestMapping(value = "/consumer/get.do", method = RequestMethod.GET)
-    public String getaa() { //eureka服务发现
-        return restTemplate.getForObject(REST_URL_PREFIX + "/provider/get.do", String.class);
+    public List getValue(@RequestBody  int COM_ID) { //eureka服务发现
+        return restTemplate.getForObject(REST_URL_PREFIX + "/provider/get.do", List.class, COM_ID);
     }
 
 
