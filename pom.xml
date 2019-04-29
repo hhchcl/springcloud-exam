@@ -17,6 +17,7 @@
         <module>deepexi-service-a-two</module>
         <module>deepexi-service-eureka-one</module>
         <module>deepexi-service-eureka-two</module>
+        <module>deepexi-service-eureka-one</module>
     </modules>
 
     <properties>

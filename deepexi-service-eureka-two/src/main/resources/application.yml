@@ -1,5 +1,5 @@
 server:
-  port: 8003
+  port: 8007
 
 #spring:
   #freemarker:
@@ -8,13 +8,13 @@ server:
 #C:\Windows\System32\drivers\etc\hosts 配置映射
 eureka:
   instance:
-    hostname: eureka.com
+    hostname: eureka.two.com
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-      defaultZone: http://eureka.one.com:8006/eureka/,http://eureka.two.com:8007/eureka/
+      defaultZone: http://eureka.com:8003/eureka/,http://eureka.two.com:8006/eureka/
 
     server:
        enable-self-preservation: false #仅在开发阶段关闭自我保护机制

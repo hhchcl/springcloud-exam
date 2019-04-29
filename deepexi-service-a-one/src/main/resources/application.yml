@@ -1,5 +1,5 @@
 server:
-  port: 8005
+  port: 8004
 
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml   #mybatis 配置文件所在路径

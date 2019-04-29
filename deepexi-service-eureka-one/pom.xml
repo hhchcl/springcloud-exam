@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>deepexi-service-eureka-two</artifactId>
+    <artifactId>deepexi-service-eureka-one</artifactId>
     <description>注册中心</description>
 
     <dependencies>
