@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/deepexi-service-a-one/deepexi-service-a-one.iml" filepath="$PROJECT_DIR$/deepexi-service-a-one/deepexi-service-a-one.iml" />
       <module fileurl="file://$PROJECT_DIR$/deepexi-service-a-two/deepexi-service-a-two.iml" filepath="$PROJECT_DIR$/deepexi-service-a-two/deepexi-service-a-two.iml" />
       <module fileurl="file://$PROJECT_DIR$/deepexi-service-b/deepexi-service-b.iml" filepath="$PROJECT_DIR$/deepexi-service-b/deepexi-service-b.iml" />
+      <module fileurl="file://$PROJECT_DIR$/deepexi-service-b-feign/deepexi-service-b-feign.iml" filepath="$PROJECT_DIR$/deepexi-service-b-feign/deepexi-service-b-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/deepexi-service-eureka/deepexi-service-eureka.iml" filepath="$PROJECT_DIR$/deepexi-service-eureka/deepexi-service-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/deepexi-service-eureka-one/deepexi-service-eureka-one.iml" filepath="$PROJECT_DIR$/deepexi-service-eureka-one/deepexi-service-eureka-one.iml" />
       <module fileurl="file://$PROJECT_DIR$/deepexi-service-eureka-two/deepexi-service-eureka-two.iml" filepath="$PROJECT_DIR$/deepexi-service-eureka-two/deepexi-service-eureka-two.iml" />

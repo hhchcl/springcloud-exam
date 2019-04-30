@@ -10,6 +10,7 @@
         <module name="deepexi-service-a" />
         <module name="deepexi-service-a-two" />
         <module name="deepexi-service-b" />
+        <module name="deepexi-service-b-feign" />
         <module name="deepexi-service-eureka-one" />
         <module name="deepexi-service-eureka-two" />
         <module name="deepexis-ervice-eureka" />
@@ -21,6 +22,7 @@
       <module name="deepexi-service-a" target="1.8" />
       <module name="deepexi-service-a-two" target="1.8" />
       <module name="deepexi-service-b" target="1.8" />
+      <module name="deepexi-service-b-feign" target="1.8" />
       <module name="deepexi-service-eureka-one" target="1.8" />
       <module name="deepexi-service-eureka-two" target="1.8" />
       <module name="deepexis-ervice-eureka" target="1.8" />
