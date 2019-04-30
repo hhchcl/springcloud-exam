@@ -1,6 +1,7 @@
 package com.deepexi.springcloud.service;
 
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSONPObject;
 import com.deepexi.springcloud.entity.Components;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,7 +18,7 @@ import java.util.Map;
 @FeignClient(value = "DEEPEXI-SERVICE")
 public interface ComponentsServiceFeign {
 
-    @RequestMapping(value = "/provider/get.do", method = RequestMethod.GET, consumes = "application/json", produces = "application/json;charset=UTF-8")
-    public List getValue(@RequestBody int COM_ID);
+    @RequestMapping(value = "/provider/get.do", method = RequestMethod.POST, consumes = "application/json", produces = "application/json;charset=UTF-8")
+    public JSONObject getValue(@RequestBody Components components);
 
 }

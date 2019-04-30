@@ -1,6 +1,7 @@
 package com.deepexi.springcloud.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSONPObject;
 import com.deepexi.springcloud.entity.Components;
 import com.deepexi.springcloud.service.ComponentsServiceFeign;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +20,10 @@ public class ComponentsController {
     @Autowired
     private ComponentsServiceFeign serviceFeign;
 
-    @RequestMapping(value = "/consumer/get.do", method = RequestMethod.GET, consumes = "application/json", produces = "application/json;charset=UTF-8")
-    public List getValue(@RequestBody int COM_ID) {
-        return this.serviceFeign.getValue(COM_ID);
+    @RequestMapping(value = "/consumer/get.do", method = RequestMethod.POST, consumes = "application/json", produces = "application/json;charset=UTF-8")
+    public JSONObject getValue(@RequestBody Components components) {
+        System.out.println("components------" + components.getCOM_ID());
+        return this.serviceFeign.getValue(components);
     }
 
 }

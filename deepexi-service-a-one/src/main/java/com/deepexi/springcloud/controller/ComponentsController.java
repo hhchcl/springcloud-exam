@@ -119,14 +119,16 @@ public class ComponentsController {
         return this.client;
     }
 
-    @RequestMapping(value = "/provider/get.do", method = RequestMethod.GET)
-    public List getValue(@RequestBody  int COM_ID) {
+    @RequestMapping(value = "/provider/get.do", method = RequestMethod.POST, consumes = "application/json", produces = "application/json;charset=UTF-8")
+    public JSONObject getValue(@RequestBody Components components) {
         List list = new ArrayList();
-        list = componentsService.queryById(COM_ID);
-        return list;
+        JSONObject json = new JSONObject();
+        list = componentsService.queryById(Integer.valueOf(components.getCOM_ID()));
+        json.put("list", list);
+        return json;
     }
 
-    @RequestMapping(value = "/provider/queryById.do", method = RequestMethod.GET)
+    @RequestMapping(value = "/provider/queryById.do", method = RequestMethod.POST, consumes = "application/json", produces = "application/json;charset=UTF-8")
     public List queryById(int COM_ID) {
         return componentsService.queryById(COM_ID);
     }

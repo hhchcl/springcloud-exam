@@ -26,4 +26,4 @@ eureka:      # 将服务注册到注册中心
 
 feign:
   hystrix:
-    enabled: true
+    enabled: false #true控制台会提示没有fallback
