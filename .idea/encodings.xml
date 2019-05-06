@@ -3,11 +3,11 @@
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/deepexi-service-a" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/deepexi-service-a-hystrix" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/deepexi-service-a-one" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/deepexi-service-a-two" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/deepexi-service-b" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/deepexi-service-b-feign" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/deepexi-service-eurek-a-one" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/deepexi-service-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/deepexi-service-eureka-one" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/deepexi-service-eureka-two" charset="UTF-8" />

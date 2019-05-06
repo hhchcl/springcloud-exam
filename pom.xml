@@ -19,6 +19,7 @@
         <module>deepexi-service-eureka-two</module>
         <module>deepexi-service-eureka-one</module>
         <module>deepexi-service-b-feign</module>
+        <module>deepexi-service-a-hystrix</module>
     </modules>
 
     <properties>

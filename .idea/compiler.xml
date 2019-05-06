@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="deepexi-service-a" />
+        <module name="deepexi-service-a-hystrix" />
         <module name="deepexi-service-a-two" />
         <module name="deepexi-service-b" />
         <module name="deepexi-service-b-feign" />
@@ -20,6 +21,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="deepexi-service-a" target="1.8" />
+      <module name="deepexi-service-a-hystrix" target="1.8" />
       <module name="deepexi-service-a-two" target="1.8" />
       <module name="deepexi-service-b" target="1.8" />
       <module name="deepexi-service-b-feign" target="1.8" />

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/deepexi-service-a/deepexi-service-a.iml" filepath="$PROJECT_DIR$/deepexi-service-a/deepexi-service-a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/deepexi-service-a-hystrix/deepexi-service-a-hystrix.iml" filepath="$PROJECT_DIR$/deepexi-service-a-hystrix/deepexi-service-a-hystrix.iml" />
       <module fileurl="file://$PROJECT_DIR$/deepexi-service-a-one/deepexi-service-a-one.iml" filepath="$PROJECT_DIR$/deepexi-service-a-one/deepexi-service-a-one.iml" />
       <module fileurl="file://$PROJECT_DIR$/deepexi-service-a-two/deepexi-service-a-two.iml" filepath="$PROJECT_DIR$/deepexi-service-a-two/deepexi-service-a-two.iml" />
       <module fileurl="file://$PROJECT_DIR$/deepexi-service-b/deepexi-service-b.iml" filepath="$PROJECT_DIR$/deepexi-service-b/deepexi-service-b.iml" />

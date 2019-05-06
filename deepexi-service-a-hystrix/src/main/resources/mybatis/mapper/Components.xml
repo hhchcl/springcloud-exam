@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.deepexi.springcloud.mapper.ComponentsMapper">
+
+    <resultMap id="componentsMap" type="com.deepexi.springcloud.entity.Components">
+        <id column="COM_ID" property="COM_ID"></id>
+        <result column="COM_NAME" property="COM_NAME"></result>
+        <result column="COM_TYPE" property="COM_TYPE"></result>
+        <result column="COM_VERSION" property="COM_VERSION"></result>
+        <result column="COM_STATUS" property="COM_STATUS"></result>
+    </resultMap>
+
+    <!-- 抽离公共字段 -->
+    <sql id="commonSQL">
+        COM_ID, COM_NAME, COM_TYPE, COM_VERSION, COM_STATUS
+    </sql>
+
+    <!-- 获取总记录数 -->
+    <select id="getAllCount" resultType="int">
+        SELECT
+          COUNT(*)
+        FROM
+          t_components
+    </select>
+
+    <select id="getAllCountCondition" parameterType="components" resultType="int">
+        SELECT
+            COUNT(*)
+        FROM
+            t_components
+        WHERE 1 = 1
+        <if test="COM_NAME != null and COM_NAME != ''">
+            AND COM_NAME LIKE CONCAT(CONCAT('%', #{COM_NAME}), '%')
+        </if>
+        <if test="COM_TYPE != null and COM_TYPE != ''">
+            AND COM_TYPE = #{COM_TYPE}
+        </if>
+        <if test="COM_STATUS != null and COM_STATUS != ''">
+            AND COM_STATUS = #{COM_STATUS}
+        </if>
+    </select>
+
+    <!-- 分页查询记录 #{arg1} 当前页, #{arg0} 每页显示数-->
+    <select id="queryList" resultMap="componentsMap">
+        SELECT
+            <include refid="commonSQL"></include>
+        FROM
+            t_components
+        LIMIT #{arg0}, #{arg1}
+    </select>
+
+    <!-- 条件查询 -->
+    <select id="queryListByCondition" parameterType="components" resultMap="componentsMap">
+        SELECT
+            <include refid="commonSQL"></include>
+        FROM
+            t_components
+        WHERE 1 = 1
+        <if test="COM_NAME != null and COM_NAME != ''">
+            AND COM_NAME LIKE CONCAT(CONCAT('%', #{COM_NAME}), '%')
+        </if>
+        <if test="COM_TYPE != null and COM_TYPE != ''">
+            AND COM_TYPE = #{COM_TYPE}
+        </if>
+        <if test="COM_STATUS != null and COM_STATUS != ''">
+            AND COM_STATUS = #{COM_STATUS}
+        </if>
+        LIMIT #{param1}, #{param2}
+    </select>
+
+    <select id="queryById" resultMap="componentsMap">
+        SELECT
+            <include refid="commonSQL"></include>
+        FROM
+            t_components
+        WHERE
+            COM_ID = #{COM_ID}
+    </select>
+
+    <select id="getComponentsById" parameterType="string" resultType="int">
+        SELECT
+            COUNT(*)
+        FROM
+            t_components
+        WHERE
+            COM_NAME = #{COM_NAME}
+    </select>
+
+    <insert id="addComponent" parameterType="components">
+        INSERT INTO t_components (
+            COM_NAME,
+            COM_TYPE,
+            COM_VERSION,
+            COM_STATUS
+        )
+        VALUES (
+            #{COM_NAME}, #{COM_TYPE}, #{COM_VERSION}, #{COM_STATUS}
+        )
+    </insert>
+
+    <update id="updCompoment" parameterType="components">
+        UPDATE t_components
+        SET
+        <if test="COM_TYPE != null and COM_TYPE != ''">
+            COM_TYPE = #{COM_TYPE},
+        </if>
+        <if test="COM_VERSION != null and COM_VERSION != ''">
+            COM_VERSION = #{COM_VERSION},
+        </if>
+        <if test="COM_STATUS != null and COM_STATUS != ''">
+            COM_STATUS = #{COM_STATUS}
+        </if>
+        WHERE
+            COM_NAME = #{COM_NAME}
+    </update>
+
+    <delete id="delCompoment" parameterType="string">
+        DELETE
+        FROM
+            t_components
+        WHERE
+            COM_NAME
+        IN
+        <foreach collection="array" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+
+</mapper>
+
+
